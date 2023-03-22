@@ -1,5 +1,6 @@
 package com.yupi.yupao.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.google.gson.Gson;
@@ -263,9 +264,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
 
     @Override
     public List<User> matchUsers(long num, User loginUser) {
-        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.select("id", "tags");
-        queryWrapper.isNotNull("tags");
+        LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
+//        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+//        queryWrapper.select("id", "tags");
+//        queryWrapper.isNotNull("tags");
+        queryWrapper.select(User::getId,User::getTags);
+        queryWrapper.isNotNull(User::getTags);
         List<User> userList = this.list(queryWrapper);
         String tags = loginUser.getTags();
         Gson gson = new Gson();

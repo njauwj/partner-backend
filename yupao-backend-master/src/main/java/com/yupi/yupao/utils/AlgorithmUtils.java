@@ -10,6 +10,13 @@ import java.util.Objects;
  */
 public class AlgorithmUtils {
 
+
+    /*
+    工具类构造器私有化
+     */
+    private AlgorithmUtils() {
+    }
+
     /**
      * 编辑距离算法（用于计算最相似的两组标签）
      * 原理：https://blog.csdn.net/DBC_121/article/details/104198838

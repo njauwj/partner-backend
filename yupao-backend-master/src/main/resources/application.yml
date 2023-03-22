@@ -25,7 +25,7 @@ spring:
     database: 1
     password: "010622"
 server:
-  port: 8080
+  port: 8090
   servlet:
     context-path: /api
 #在 Spring Boot 项目中，Session Cookie Domain 是用来设置会话 Cookie 的域名，它指定了哪些网站可以共享该 Cookie。

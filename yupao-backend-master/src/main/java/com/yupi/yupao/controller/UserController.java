@@ -32,7 +32,7 @@ import static com.yupi.yupao.constant.UserConstant.USER_LOGIN_STATE;
  */
 @RestController
 @RequestMapping("/user")
-@CrossOrigin(origins = {"http://localhost:3000"})
+@CrossOrigin(value = {"http://f.usercenter-wj.icu/","http://1.15.145.217:3000/","https://partner-front-38317-8-1317422184.sh.run.tcloudbase.com"}, allowCredentials = "true")
 @Slf4j
 public class UserController {
 

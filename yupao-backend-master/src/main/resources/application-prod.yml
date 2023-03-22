@@ -2,10 +2,10 @@
 spring:
   # DataSource Config
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/yupao
+    driver-class-name: com.mysql.jdbc.Driver
+    url: 'jdbc:mysql://sh-cynosdbmysql-grp-e2g25xa4.sql.tencentcdb.com:26753/yupao?useSSL=false'
     username: root
-    password: 123456
+    password: "010622wjAdm"
   # session 失效时间
   session:
     timeout: 86400
